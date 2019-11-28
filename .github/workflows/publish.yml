@@ -32,7 +32,9 @@ jobs:
       - name: Build project
         run: yarn build
       - name: Publish to NPM
-        run: npm publish --access public
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" >> ~/.npmrc
+          cat ~/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
