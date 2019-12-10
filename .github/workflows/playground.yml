@@ -1,0 +1,15 @@
+name: Playground
+
+on:
+  push:
+    branches:
+      - playground
+
+jobs:
+
+  playground:
+    name: Playground stuff
+    runs-on: [ubuntu-latest]
+    steps:
+      - using: 'docker'
+        image: 'Dockerfile'
