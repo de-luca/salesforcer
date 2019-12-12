@@ -12,7 +12,10 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v1
-      - uses: ./.github/workflows
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: "de-luca/salesforcer"
+      - run: |
+          git status
+          git remote -v
+          git remote add upstream digitregroup/salesforcer
+          git remote -v
+          git fetch upstream
+      
