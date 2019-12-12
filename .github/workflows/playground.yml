@@ -11,5 +11,4 @@ jobs:
     name: Playground stuff
     runs-on: [ubuntu-latest]
     steps:
-      - using: 'docker'
-        image: 'Dockerfile'
+      - uses: ./.github/actions
