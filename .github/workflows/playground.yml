@@ -11,10 +11,12 @@ jobs:
     name: Playground stuff
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v1
       - run: |
           git status
           git remote add upstream https://github.com/digitregroup/salesforcer.git
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/de-luca/salesforcer.git"
           git fetch upstream
-          git push origin upstream/master:master -n
+          git push github upstream/master:master -n
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
