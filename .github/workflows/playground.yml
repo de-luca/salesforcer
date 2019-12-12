@@ -8,7 +8,7 @@ on:
 jobs:
 
   playground:
-    if: github.event.event_name == "push"
+    if: github.event.event_name == push
     name: Playground stuff
     runs-on: [ubuntu-latest]
     steps:
