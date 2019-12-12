@@ -15,7 +15,7 @@ jobs:
       - run: |
           git status
           git remote -v
-          git remote add upstream digitregroup/salesforcer
+          git remote add upstream https://github.com/digitregroup/salesforcer.git
           git remote -v
           git fetch upstream
       
