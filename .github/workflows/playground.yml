@@ -16,5 +16,5 @@ jobs:
           git status
           git remote add upstream https://github.com/digitregroup/salesforcer.git
           git fetch upstream
-          git push origin/master:upstream/master -n
+          git push origin upstream/master:master -n
       
